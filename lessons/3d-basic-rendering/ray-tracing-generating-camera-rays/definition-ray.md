@@ -18,7 +18,7 @@ for (int j = 0; j < height; ++j) {
         float tnear = INFINITY;  //closest intersection, set to INFINITY to start with 
         for (int k = 0; k < numObjects; ++k) { 
              float t = INFINITY;  //intersection to the current object if any 
-             if objects[k]->intersect(pimaryRay, tnear) && t < tnear) { 
+             if (objects[k]->intersect(pimaryRay, t) && t < tnear) { 
                  tnear = t; 
                  framebuffer= objects[k].color; 
             } 
